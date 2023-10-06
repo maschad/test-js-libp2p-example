@@ -1,0 +1,24 @@
+{
+  "name": "js-libp2p-webrtc-private-to-private",
+  "version": "1.0.0",
+  "description": "Connect a browser to another browser",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "relay": "node relay.js",
+    "test:firefox": "npm run build && playwright test --browser=firefox tests",
+    "test:chrome": "npm run build && playwright test tests",
+    "test": "npm run build && test-browser-example tests"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "^13.0.1",
+    "@libp2p/websockets": "^7.0.8",
+    "@libp2p/mplex": "^9.0.7",
+    "@libp2p/webrtc": "3.2.1",
+    "@multiformats/multiaddr": "^12.1.7",
+    "it-pushable": "^3.2.1",
+    "libp2p": "^0.46.12",
+    "vite": "^4.4.11"
+  }
+}
